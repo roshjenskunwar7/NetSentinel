@@ -1,10 +1,10 @@
-## NetSentinel
+NetSentinel
 Hybrid Network Intrusion Detection System (NIDS)
 NetSentinel is a defensive cybersecurity application designed to monitor authorized network traffic, analyze network flows, identify suspicious activity, and generate security alerts.
 The project combines network packet analysis, rule-based detection, machine learning, anomaly detection, and a web dashboard into a single system.
 Educational and defensive use only. NetSentinel is intended for monitoring networks and systems that you own or have explicit authorization to monitor.
 ________________________________________
-#Overview
+Overview
 Traditional network monitoring can generate large amounts of traffic data that are difficult to analyze manually.
 NetSentinel aims to automate this process:
                     Network Traffic
@@ -48,7 +48,7 @@ NetSentinel aims to automate this process:
                   │ Web Dashboard │
                   └───────────────┘
 ________________________________________
-#Objectives
+Objectives
 The main objectives of NetSentinel are to:
 •	Capture authorized network traffic.
 •	Convert packets into network-flow records.
@@ -62,7 +62,7 @@ The main objectives of NetSentinel are to:
 •	Evaluate detection performance using cybersecurity-relevant metrics.
 •	Provide a modular foundation that can be extended in future research.
 ________________________________________
-#Key Features
+Key Features
 Network Traffic Capture
 Capture authorized network traffic and extract information such as:
 •	Source IP address
@@ -74,7 +74,7 @@ Capture authorized network traffic and extract information such as:
 •	Timestamp
 •	TCP flags
 ________________________________________
-#Flow Generation
+Flow Generation
 Instead of analyzing individual packets independently, NetSentinel aggregates packets into network flows.
 Example:
 Source IP:        192.168.1.20
@@ -86,7 +86,7 @@ Packets:          147
 Bytes:            82,451
 Flow-based analysis provides a more useful representation for machine-learning models.
 ________________________________________
-#Feature Extraction
+Feature Extraction
 Network flows are converted into numerical and categorical features suitable for analysis and machine learning.
 Potential features include:
 •	Flow duration
@@ -101,7 +101,7 @@ Potential features include:
 •	Connection frequency
 •	Number of unique destination ports
 ________________________________________
-#Rule-Based Detection
+Rule-Based Detection
 NetSentinel can detect known suspicious patterns using configurable rules.
 Potential detections include:
 •	Port scanning
@@ -123,7 +123,7 @@ Source IP
           ▼
 Possible Port Scan
 ________________________________________
-#Machine Learning Detection
+Machine Learning Detection
 Machine-learning models can classify network flows as benign or suspicious.
 Initial models may include:
 •	Logistic Regression
@@ -131,11 +131,11 @@ Initial models may include:
 •	Random Forest
 Future experiments may include additional algorithms where appropriate.
 ________________________________________
-#Anomaly Detection
+Anomaly Detection
 The project can also explore detecting traffic that significantly differs from normal network behavior.
 The goal is to identify potentially suspicious behavior even when a specific attack signature is not available.
 ________________________________________
-#Alert System
+Alert System
 Detected events are converted into security alerts containing information such as:
 Alert
 --------------------------------
@@ -147,7 +147,7 @@ Severity:        HIGH
 Confidence:      94%
 --------------------------------
 ________________________________________
-#Web Dashboard
+Web Dashboard
 The planned dashboard will provide an overview of network activity.
 Example:
 ================================================
@@ -179,7 +179,7 @@ Top Source IPs
 192.168.1.45       281 connections
 ================================================
 ________________________________________
-#Technology Stack
+Technology Stack
 Backend
 •	Python
 •	FastAPI
@@ -207,7 +207,7 @@ Development
 •	VS Code
 •	Codex
 ________________________________________
-#Project Architecture
+Project Architecture
 The planned project structure is:
 NetSentinel/
 │
@@ -278,7 +278,7 @@ NetSentinel/
 ├── pyproject.toml
 └── README.md
 ________________________________________
-#Detection Architecture
+Detection Architecture
 NetSentinel uses a hybrid detection architecture.
                     Network Flow
                          │
@@ -302,7 +302,7 @@ NetSentinel uses a hybrid detection architecture.
                      Dashboard
 This allows known patterns to be detected through explicit rules while machine learning can identify patterns learned from training data.
 ________________________________________
-#Machine Learning Pipeline
+Machine Learning Pipeline
 The machine-learning pipeline is planned to use network intrusion datasets such as UNSW-NB15 for experimentation.
 Dataset
    │
@@ -345,7 +345,7 @@ Models can be compared using:
 •	False-negative rate
 Accuracy alone will not be used as the sole measure of system performance.
 ________________________________________
-#Development Roadmap
+Development Roadmap
 Phase 1 — Project Foundation
 •	Create GitHub repository
 •	Create Python project structure
@@ -435,7 +435,7 @@ Phase 12 — Documentation
 •	Limitations
 •	Future work
 ________________________________________
-#Installation
+Installation
 Installation instructions will be updated as the project develops.
 Requirements
 Recommended:
@@ -456,7 +456,7 @@ pip install -e .
 Run tests:
 pytest
 ________________________________________
-#Usage
+Usage
 The exact commands will evolve as the application is implemented.
 The planned workflow is:
 1. Start NetSentinel
@@ -479,7 +479,7 @@ The planned workflow is:
         ↓
 10. View dashboard
 ________________________________________
-#Testing Strategy
+Testing Strategy
 Testing will be performed at multiple levels.
 Unit Testing
 Individual components will be tested independently:
@@ -512,7 +512,7 @@ F1-score
 False Positive Rate
 False Negative Rate
 ________________________________________
-#Security and Ethical Considerations
+Security and Ethical Considerations
 NetSentinel is designed for defensive cybersecurity research and authorized network monitoring.
 Users should only capture or analyze network traffic when they have appropriate authorization.
 The project does not aim to provide:
@@ -528,7 +528,7 @@ Testing should be performed using:
 •	Laboratory networks
 •	Networks where explicit authorization has been provided
 ________________________________________
-#Laboratory Environment
+Laboratory Environment
 A controlled virtual environment can be used for testing.
 Example:
                 Host Computer
@@ -544,7 +544,7 @@ Example:
                   NetSentinel
 The laboratory environment allows traffic-generation and detection experiments without monitoring unrelated networks.
 ________________________________________
-#Limitations
+Limitations
 NetSentinel is an educational and research project and should not initially be considered a replacement for production-grade intrusion detection systems.
 Potential limitations include:
 •	Limited attack coverage
@@ -558,7 +558,7 @@ Potential limitations include:
 •	Potential concept drift in real-world networks
 These limitations will be documented and evaluated as development progresses.
 ________________________________________
-#Future Improvements
+Future Improvements
 Potential future work includes:
 •	More advanced anomaly detection
 •	Deep-learning models
@@ -574,7 +574,7 @@ Potential future work includes:
 •	Automated model retraining
 •	Integration with external SIEM platforms
 ________________________________________
-#Project Goals
+Project Goals
 The final goal is to create a working defensive cybersecurity platform that demonstrates practical knowledge of:
 Networking
      +
@@ -594,11 +594,11 @@ Web Development
      +
 Software Testing
 ________________________________________
-#License
+License
 This project is intended for educational and defensive cybersecurity research.
 License information will be added as the project matures.
 ________________________________________
-#Disclaimer
+Disclaimer
 NetSentinel must only be used on systems and networks for which the user has explicit authorization to monitor or analyze traffic.
 The developers are not responsible for unauthorized use of this software.
 
