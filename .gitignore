@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.env
+
+# Captured traffic and local databases can contain sensitive data
+*.pcap
+*.pcapng
+*.db
+
+# Datasets and trained models are large, so we keep them out of Git
+data/raw/
+data/processed/
+models/*.joblib
